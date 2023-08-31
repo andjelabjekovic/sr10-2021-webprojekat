@@ -7,6 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
+
 @Entity
 public class Vakcina {
 
@@ -28,7 +30,7 @@ public class Vakcina {
 		this.dostupnaKolicina = dostupnaKolicina;
 	//	this.setProizvodjaci(new ArrayList<Proizvodjac>());
 	}
-	public Vakcina(Long id,String ime, int dostupnaKolicina, String proizvodjac) {
+	public Vakcina(Long id,String ime, int dostupnaKolicina) {
 		super();
 		this.id = id;
 		this.ime = ime;

@@ -1,0 +1,30 @@
+
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>broj obolelih u poslednjih 24h</th>
+<th>broj testiranih u poslednjih 24h/th>
+<th>broj obolelih ukupno/th>
+<th>broj hospitalizovanih/th>
+<th>broj pacijanata na respiratoru/th>
+<th>datum i vreme objave/th>
+
+</tr>
+</thead>
+<tbody>
+<tr th:each ="proizvodjaci:${proizvodjaci}">
+<td th:text=${proizvodjaci.id}></td>
+<td th:text=${proizvodjaci.brojObolelih24h}></td>
+<td th:text=${proizvodjaci.brojTestiranih24h}></td>
+<td th:text=${proizvodjaci.brojObolelihUkupno}></td>
+<td th:text=${proizvodjaci.brojHospitalizovanih}></td>
+<td th:text=${proizvodjaci.brojPacijanataNaResp}></td>
+<td th:text=${proizvodjaci.datumIVremeObjave}></td>
+v
+
+
+ 
+ <td><a th:href="@{/proizvodjaci/ukloni/{id}(id=${proizvodjaci.id})} ">ukloni</a>
+ <a th:href="@{/proizvodjaci/izmeni/{id}(id=${proizvodjaci.id})} ">izmeni</a></td></tr></tbody>
+ </table>

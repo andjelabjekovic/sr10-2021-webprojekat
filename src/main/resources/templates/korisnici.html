@@ -1,0 +1,31 @@
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>email</th>
+<th>lozinka</th>
+<th>ime</th>
+<th>prezime</th>
+<th>datumRodjenja</th>
+<th>jmbg</th>
+<th>adresa</th>
+<th>broj telefona</th>
+<th>datum i vreme reg</th>
+</tr>
+</thead>
+<tbody>
+<tr th:each ="korisnici:${korisnici}">
+<td th:text=${korisnici.id}></td>
+<td th:text=${korisnici.email}></td>
+<td th:text=${korisnici.lozinka}></td>
+<td th:text=${korisnici.ime}></td>
+<td th:text=${korisnici.datumRodjenja}></td>
+<td th:text=${korisnici.jmbg}></td>
+<td th:text=${korisnici.adresa}></td>
+<td th:text=${korisnici.brojTelefona}></td>
+<td th:text=${korisnici.datumIVremeReg}></td>
+
+ 
+ <td><a th:href="@{/korisnici/ukloni/{id}(id=${korisnici.id})} ">ukloni</a>
+ <a th:href="@{/korisnici/izmeni/{id}(id=${korisnici.id})} ">izmeni</a></td></tr></tbody>
+ </table>

@@ -1,0 +1,20 @@
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>proizvodjacevo ime</th>
+<th>drzava proizvodnje</th>
+
+</tr>
+</thead>
+<tbody>
+<tr th:each ="proizvodjaci:${proizvodjaci}">
+<td th:text=${proizvodjaci.id}></td>
+<td th:text=${proizvodjaci.proizvodjacIme}></td>
+<td th:text=${proizvodjaci.drzavaProizvodnje}></td>
+
+
+ 
+ <td><a th:href="@{/proizvodjaci/ukloni/{id}(id=${proizvodjaci.id})} ">ukloni</a>
+ <a th:href="@{/proizvodjaci/izmeni/{id}(id=${proizvodjaci.id})} ">izmeni</a></td></tr></tbody>
+ </table>

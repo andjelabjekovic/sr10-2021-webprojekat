@@ -17,6 +17,8 @@ import com.ftn.PrviMavenVebProjekat.service.impl.UlogaService;
 @Controller
 @RequestMapping(value = "/uloge")
 public class UlogaController {
+	
+	
 	@Autowired
 	private UlogaService ulogaService;
 	
