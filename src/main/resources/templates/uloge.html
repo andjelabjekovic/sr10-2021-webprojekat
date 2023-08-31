@@ -1,0 +1,17 @@
+<h4>OOOOOOO</h4>
+${uloge}
+<p th:text="${uloge}" ></p>
+<ul>
+<li th:each ="uloga:${uloge}" > <span th:text=${uloga.naziv} ></span> </li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>naziv</th>
+<th>akcije</th>
+</tr>
+</thead>
+<tbody><tr th:each ="uloga:${uloge}"><td th:text=${uloga.id}></td> <td th:text=${uloga.naziv}></td> <td>
+<a th:href="@{/uloge/ukloni/{id}(id=${uloga.id})} ">ukloni</a><a th:href="@{/uloge/izmeni/{id}(id=${uloga.id})} ">izmeni</a></td></tr></tbody>
+</table>
